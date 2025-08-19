@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>800</width>
+                <height>600</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>BBS云服务器客户端</string>
+        </property>
+
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <!-- 服务器连接区域 -->
+                <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                        <item>
+                            <widget class="QLineEdit" name="serverAddressEdit">
+                                <property name="placeholderText">
+                                    <string>输入服务器地址（如：ws://127.0.0.1）</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QLineEdit" name="serverPortEdit">
+                                <property name="placeholderText">
+                                    <string>输入端口号（如：8080）</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="connectButton">
+                                <property name="text">
+                                    <string>连接服务器</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+
+                <!-- 消息显示区域 -->
+                <item>
+                    <widget class="QListView" name="messageView">
+                        <property name="alternatingRowColors">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </item>
+
+                <!-- 消息输入区域 -->
+                <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                        <item>
+                            <widget class="QLineEdit" name="messageEdit">
+                                <property name="placeholderText">
+                                    <string>输入消息内容...</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="sendButton">
+                                <property name="text">
+                                    <string>发送</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+
+                <!-- 状态栏 -->
+                <item>
+                    <widget class="QLabel" name="statusLabel">
+                        <property name="text">
+                            <string>未连接</string>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>

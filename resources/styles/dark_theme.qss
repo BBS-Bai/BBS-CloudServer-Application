@@ -1,0 +1,47 @@
+/* 深色主题样式 */
+QMainWindow {
+    background-color: #2D2D30;
+}
+
+QWidget {
+    color: #DCDCDC;
+    font-family: "微软雅黑";
+}
+
+QPushButton {
+    background-color: #3F3F46;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #4F4F57;
+}
+
+QPushButton:pressed {
+    background-color: #2A2A2E;
+}
+
+QLineEdit, QListView {
+    background-color: #1E1E1E;
+    border: 1px solid #3F3F46;
+    border-radius: 4px;
+    padding: 6px;
+    color: #DCDCDC;
+}
+
+QStatusBar {
+    background-color: #252526;
+    color: #DCDCDC;
+}
+
+QListView::item {
+    padding: 8px;
+    border-bottom: 1px solid #3F3F46;
+}
+
+QListView::item:selected {
+    background-color: #094771;
+    color: white;
+}
