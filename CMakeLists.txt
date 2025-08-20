@@ -19,7 +19,7 @@ add_executable(${PROJECT_NAME}
         src/mainwindow/mainwindow.cpp
         src/mainwindow/mainwindow.h
         src/mainwindow/mainwindow.ui
-        src/network/websocket.cpp
+        "src/network/websocket(older).cpp"
         src/network/websocket_client.cpp
         src/network/websocket_client.h
         src/core/logger.h

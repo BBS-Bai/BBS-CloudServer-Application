@@ -1,5 +1,5 @@
 #include "logger.h"
-
+#include <QCoreApplication>
 Logger* Logger::instance() {
     static Logger logger;
     return &logger;
@@ -16,7 +16,7 @@ Logger::Logger(QObject *parent) : QObject(parent) {
     }
     
     m_logStream.setDevice(&m_logFile);
-    m_logStream.setCodec("UTF-8");
+    m_logStream.setEncoding(QStringConverter::Utf8);
     
     // 写入日志头
     m_logStream << "[" << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") << "] "

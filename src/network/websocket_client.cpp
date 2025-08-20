@@ -1,5 +1,5 @@
 #include "websocket_client.h"
-#include "core/logger.h"
+#include "../core/logger.h"
 
 WebSocketClient::WebSocketClient(QObject *parent)
     : QObject(parent)

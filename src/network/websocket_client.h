@@ -2,7 +2,7 @@
 #define WEBSOCKET_CLIENT_H
 
 #include <QObject>
-#include <QWebSocket>
+#include <QtWebSockets/QWebSocket>
 #include <QHostAddress>
 
 class WebSocketClient : public QObject {
