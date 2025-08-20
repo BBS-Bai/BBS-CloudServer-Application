@@ -3,7 +3,7 @@
 #include <QStyleFactory>
 #include "src/core/logger.h"
 #include "src/core/config_loader.h"
-#include "resources/resources.qrc"  // 包含资源文件
+//#include "resources/resources.qrc"  // 包含资源文件
 
 
 int main(int argc, char *argv[]) {
