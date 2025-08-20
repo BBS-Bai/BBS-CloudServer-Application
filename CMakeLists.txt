@@ -30,4 +30,4 @@ add_executable(${PROJECT_NAME}
 )
 
 # 链接Qt Widgets库
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Network Qt6::Core)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Network Qt6::Widgets Qt6::Core)
