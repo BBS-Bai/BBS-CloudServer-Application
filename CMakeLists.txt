@@ -4,16 +4,21 @@ project(BBS-CloudServer-Application LANGUAGES CXX)
 # 基础配置
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_AUTOMOC ON)   # 自动处理moc
+
+# 启用自动 UI 编译（必须！）
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)  # 自动处理 moc（若使用信号槽）
+set(CMAKE_AUTORCC ON)  # 自动处理资源文件（若有）
 
 # 仅需Qt Widgets模块
 find_package(Qt6 COMPONENTS Widgets Core Network REQUIRED)
-
+qt6_wrap_ui(UI_HEADERS mainwindow.ui)
 # 主可执行文件
 add_executable(${PROJECT_NAME}
         main.cpp
         src/mainwindow/mainwindow.cpp
         src/mainwindow/mainwindow.h
+        src/mainwindow/mainwindow.ui
         src/network/websocket.cpp
         src/network/websocket_client.cpp
         src/network/websocket_client.h

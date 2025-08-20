@@ -1,0 +1,19 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/">
+        <!-- 应用程序图标 -->
+        <file>resources/icons/app_icon.ico</file>
+
+        <!-- 界面图标 -->
+        <file>resources/icons/server.png</file>
+
+        <!-- 样式表 -->
+        <file>resources/styles/dark_theme.qss</file>
+
+        <!-- 翻译文件 -->
+        <file>resources/translations/zh_CN.ts</file>
+        <file>resources/translations/en_US.ts</file>
+
+        <!-- 可选：日志文件（用于调试） -->
+        <file>logs/debug.log</file>
+    </qresource>
+</RCC>

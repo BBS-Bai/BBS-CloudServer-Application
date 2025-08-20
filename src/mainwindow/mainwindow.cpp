@@ -1,6 +1,7 @@
 #include "mainwindow.h"
+
 #include "ui_mainwindow.h"
-#include "core/config_loader.h"
+#include "../core/config_loader.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

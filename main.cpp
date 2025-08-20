@@ -1,9 +1,10 @@
-#include "mainwindow.h"
+#include "src/mainwindow/mainwindow.h"
 #include <QApplication>
 #include <QStyleFactory>
-#include "core/logger.h"
-#include "core/config_loader.h"
+#include "src/core/logger.h"
+#include "src/core/config_loader.h"
 #include "resources/resources.qrc"  // 包含资源文件
+
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);

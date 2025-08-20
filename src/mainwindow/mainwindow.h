@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QWebSocket>
+#include <QtWebSockets/QWebSocket>
 #include "../network/websocket_client.h"
 #include "../core/logger.h"
 #include "../models/message_model.h"
