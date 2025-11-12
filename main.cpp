@@ -37,5 +37,36 @@ int main(int argc, char *argv[]) {
 
     return app.exec();
 }
+
 */
+
+//2025.11.13 Bedug!!!
+
+#include "src/core/logger.h"
+#include "src/core/config_loader.h"
+
+int main(){
+    std::string user_id,user_password;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
