@@ -1,4 +1,4 @@
-#include "src/mainwindow/mainwindow.h"
+/*#include "src/mainwindow/mainwindow.h"
 #include <QApplication>
 #include <QStyleFactory>
 #include "src/core/logger.h"
@@ -37,3 +37,5 @@ int main(int argc, char *argv[]) {
 
     return app.exec();
 }
+*/
+

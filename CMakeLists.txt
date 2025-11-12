@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 project(BBS-CloudServer-Application LANGUAGES CXX)
-
+set(VULKAN_INCLUDE_DIR "" CACHE PATH "Vulkan include directory (not required for this project)")
 # 基础配置
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

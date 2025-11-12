@@ -2,6 +2,7 @@
 <ui version="4.0">
     <class>MainWindow</class>
     <widget class="QMainWindow" name="MainWindow">
+        <!-- 窗口基础属性 -->
         <property name="geometry">
             <rect>
                 <x>0</x>
@@ -14,9 +15,12 @@
             <string>BBS云服务器客户端</string>
         </property>
 
+        <!-- 中心部件（承载所有界面元素） -->
         <widget class="QWidget" name="centralwidget">
+            <!-- 主垂直布局：管理“连接区、消息显示区、输入区、状态栏”的垂直排列 -->
             <layout class="QVBoxLayout" name="verticalLayout">
-                <!-- 服务器连接区域 -->
+
+                <!-- 🔵 服务器连接区域：水平布局（地址输入 + 端口输入 + 连接按钮） -->
                 <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_2">
                         <item>
@@ -43,16 +47,16 @@
                     </layout>
                 </item>
 
-                <!-- 消息显示区域 -->
+                <!-- 🔵 消息显示区域：QListView 实现聊天记录/系统消息展示 -->
                 <item>
                     <widget class="QListView" name="messageView">
                         <property name="alternatingRowColors">
-                            <bool>true</bool>
+                            <bool>true</bool> <!-- 开启交替行颜色，提升可读性 -->
                         </property>
                     </widget>
                 </item>
 
-                <!-- 消息输入区域 -->
+                <!-- 🔵 消息输入区域：水平布局（消息输入框 + 发送按钮） -->
                 <item>
                     <layout class="QHBoxLayout" name="horizontalLayout">
                         <item>
@@ -72,19 +76,64 @@
                     </layout>
                 </item>
 
-                <!-- 状态栏 -->
+                <!-- 🔵 状态栏：显示连接状态（未连接/已连接/错误等） -->
                 <item>
                     <widget class="QLabel" name="statusLabel">
                         <property name="text">
                             <string>未连接</string>
                         </property>
                         <property name="alignment">
-                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set> <!-- 右对齐 -->
                         </property>
                     </widget>
                 </item>
+
             </layout>
         </widget>
+
+        <!-- 全局样式表：美化界面视觉风格 -->
+        <property name="styleSheet">
+            <string notr="true">QMainWindow{
+                background: #f5f5f5; /* 主窗口背景色 */
+                }
+                QWidget#centralwidget{
+                background: white; /* 中心部件背景白 */
+                border: 1px solid #eee; /* 浅灰边框 */
+                border-radius: 5px; /* 圆角 */
+                padding: 10px; /* 内边距 */
+                }
+                QHBoxLayout#horizontalLayout_2, QHBoxLayout#horizontalLayout{
+                margin: 10px 0; /* 布局上下间距 */
+                }
+                QLineEdit{
+                border: 1px solid #ddd; /* 输入框边框 */
+                border-radius: 3px; /* 输入框圆角 */
+                padding: 5px; /* 输入框内边距 */
+                width: 200px; /* 输入框默认宽度 */
+                }
+                QPushButton{
+                background: #4CAF50; /* 按钮默认背景（绿色系） */
+                color: white; /* 文字白色 */
+                border: none; /* 移除默认边框 */
+                border-radius: 3px; /* 按钮圆角 */
+                padding: 5px 10px; /* 按钮内边距 */
+                }
+                QPushButton:hover{
+                background: #45a049; /* 鼠标悬浮时加深背景 */
+                }
+                QListView{
+                border: 1px solid #ddd; /* 消息列表边框 */
+                border-radius: 3px; /* 消息列表圆角 */
+                padding: 5px; /* 消息列表内边距 */
+                }
+                QLabel#statusLabel{
+                background: #eee; /* 状态栏背景浅灰 */
+                padding: 5px; /* 状态栏内边距 */
+                border-radius: 3px; /* 状态栏圆角 */
+                font-size: 12px; /* 字体大小 */
+                }</string>
+        </property>
+
     </widget>
     <resources/>
     <connections/>
