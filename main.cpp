@@ -1,4 +1,4 @@
-/*#include "src/mainwindow/mainwindow.h"
+#include "src/mainwindow/mainwindow.h"
 #include <QApplication>
 #include <QStyleFactory>
 #include "src/core/logger.h"
@@ -38,19 +38,23 @@ int main(int argc, char *argv[]) {
     return app.exec();
 }
 
-*/
+
 
 //2025.11.13 Bedug!!!
+/*
+#include <iostream>
 
 #include "src/core/logger.h"
 #include "src/core/config_loader.h"
-
+using namespace std;
 int main(){
     std::string user_id,user_password;
-
+    cin>>user_id>>user_password;
+    cout<<user_id<<user_password<<endl;
+    return 0;
 }
 
-
+*/
 
 
 
